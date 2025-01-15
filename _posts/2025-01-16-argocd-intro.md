@@ -1,5 +1,5 @@
 ---
-title: Takoyaki dominates the world
+title: Takoyaki Dominates The World
 author: khangtictoc
 date: 2024-09-22 00:34:00 +0800
 categories: [Tutorial]
@@ -18,9 +18,10 @@ Look at the architecture below
 
 ![ArgoCD Architecture](assets/img/2025/argocd_architecture.png)
 
-And then look straight ahead at **stupid octopus's face**. That's our **ArgoCD**. 
+And then look straight ahead at the **stupid octopus's face**. That's our **ArgoCD**. 
 
-ArgoCD is a deployment tool used for deploying services on specific Kubernetes environment. It adapts **GitOps** mechanism which leverage **Git** source (many documents refer as 'sources of truth') to control the version of deployed infrastructure of Kubernetes environment. We manage declarative configuration files and it could perform an automation process to make the production environment match the described state in the repository
+ArgoCD is a deployment tool used for deploying services on specific Kubernetes environment. It adapts **GitOps** mechanism which leverage **Git** source (many documents refer as 'sources of truth') to control the version of deployed infrastructure of Kubernetes environment. 
+Our responsibility now is to manage declarative configuration files and ArgoCD could perform an automation process to make the production environment match the described state in the repository
 
 ## Installation
 
