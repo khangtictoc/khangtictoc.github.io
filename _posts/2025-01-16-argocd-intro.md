@@ -16,7 +16,7 @@ In CI/CD, when speaking of CI(Continuous Integration), off the top of our head, 
 
 Look at the architecture below
 
-![ArgoCD Architecture](/_posts/2025/argocd_architecture.png)
+![ArgoCD Architecture](assets/img/2025/argocd_architecture.png)
 
 And then look straight ahead at **stupid octopus's face**. That's our **ArgoCD**. 
 
