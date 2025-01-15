@@ -34,7 +34,9 @@ jobs:
           # submodules: true
           # If using the 'assets' git submodule from Chirpy Starter, uncomment above
           # (See: https://github.com/cotes2020/chirpy-starter/tree/main/assets)
-
+      - name: Install debug packages
+        run: apt install -y tree
+        
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
@@ -52,7 +54,7 @@ jobs:
 
       - name: Debug site
         run: ls -al .
-        
+
       - name: Test site
         run: |
           bundle exec htmlproofer _site \
