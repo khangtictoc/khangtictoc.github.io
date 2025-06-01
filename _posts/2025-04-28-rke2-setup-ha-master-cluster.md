@@ -17,6 +17,9 @@ tags: [intro, kubernetes]
 ## Prerequisites
 ## Installation
 
+
+
+
 ### Master Node
 
 ### Worker Node (Agent)
