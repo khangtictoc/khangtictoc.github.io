@@ -1,0 +1,15 @@
+---
+title: Modern Data Consistency - Consistent Hashing In Disk Partition & Database
+author: khangtictoc
+date: 2025-06-13 00:34:00 +0800
+categories: [Tiếng Việt, Kỹ năng sống]
+tags: [love, girl]
+---
+
+For i = 1; i <=n; i++ {
+  Bước 1: Tìm đối tượng
+  Bước 2: Tán gái
+  Bước 3: Bị gái táng sưng mồm
+}
+
+let n = +inf
