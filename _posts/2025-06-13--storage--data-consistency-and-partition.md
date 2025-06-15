@@ -1,5 +1,5 @@
 ---
-title: Physical & Database Relationship - Modern Data Consistency Over Partitions
+title: Modern Data Consistency - Consistent Hashing In Disk Partition & Database
 author: khangtictoc
 date: 2025-06-13 00:34:00 +0800
 categories: [Theory]

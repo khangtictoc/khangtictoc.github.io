@@ -1,5 +1,5 @@
 ---
-title: AWS SAA Services Series - Simple Notification Service (SNS)
+title: AWS Services Series - Simple Notification Service (SNS)
 author: khangtictoc
 date: 2024-09-22 00:34:00 +0800
 categories: [Summary]

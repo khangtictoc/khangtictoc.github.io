@@ -1,5 +1,5 @@
 ---
-title: AWS SAA Services Series - DynamoDB
+title: AWS Services Series - DynamoDB
 author: khangtictoc
 date: 2024-09-22 00:34:00 +0800
 categories: [Summary]
