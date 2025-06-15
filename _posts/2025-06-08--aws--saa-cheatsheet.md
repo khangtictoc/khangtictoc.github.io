@@ -30,6 +30,12 @@ Reference:
 - https://www.techtarget.com/searchstorage/definition/parallel-file-system
 - https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless
 
+
+
+## Common Architecture
+
+**Fan-out architecture**
+
 ## Services
 
 ### Storage

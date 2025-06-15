@@ -1,15 +1,13 @@
 ---
-title: AWS Services Series - Simple Queue Service (SQS)
+title: AWS Services Summary - Compute
 author: khangtictoc
 date: 2024-09-22 00:34:00 +0800
-categories: [Summary]
+categories: [Summary, AWS Services Series]
 tags: [cloud, aws]
 ---
 
 
-## Instance
-## Snapshot
-## Auto Scaling Group
+## EC2
 
 ### Dynamic scaling policy
 
