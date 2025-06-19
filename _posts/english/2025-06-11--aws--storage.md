@@ -14,3 +14,8 @@ tags: [cloud, aws]
 > **Fast-up data transfer:**
 > -  Enable Transfer Acceleration in the destination bucket 
 > -  Upload the collected data using Multipart Upload.
+
+## Elastic Filesystem Service (EFS)
+
+### Configurations
+- **EFS lifecycle policies:** maximum days is only up to 365 days

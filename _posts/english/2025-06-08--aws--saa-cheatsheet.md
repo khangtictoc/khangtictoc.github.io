@@ -30,11 +30,17 @@ Reference:
 - https://www.techtarget.com/searchstorage/definition/parallel-file-system
 - https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless
 
+**Cross-origin resource sharing (CORS)** defines a way for client web applications that are loaded in one domain to interact with resources in a different domain. With CORS support, you can build rich client-side web applications with Amazon S3 and selectively allow cross-origin access to your Amazon S3 resources.
 
+![Parallel file system](assets/img/2025/aws/saa-cheatsheet/cors-overview.png)
 
 ## Common Architecture
 
-**Fan-out architecture**
+**Fan-out pattern**
+
+**Blue-green deployment**
+
+**Canary deployment**
 
 ## Services
 

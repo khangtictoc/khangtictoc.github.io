@@ -22,3 +22,26 @@ tags: [cloud, aws]
 Features:
 - Data warehousing solution
 - Built on a relational database model
+
+
+## RDS
+
+### Features
+- Multi-AZ failover: Decrease failover rate beside solely using Multi-AZ deployment.
+
+
+### Configurations
+
+**Enhanced Monitoring:** monitor how the different processes or threads on a DB instance use the CPU, including the percentage of the CPU bandwidth and total memory consumed by each process.
+
+### Amazon Aurora 
+
+A cluster of DB instances
+
+**Features:**
+- Connection:
+  - Each connection is handled by a specific DB instance
+  - When connecting to an Aurora cluster, the host name and port that you specify point to an intermediate handler called an "endpoint" => Abstract these connections
+  - Advantages: 
+    - Don't have to hardcode **hostnames** or **write logic** for load-balancing and rerouting connections when DB instances aren't available.
+    - Different instances or groups perform different roles: Heavy-workload tasks will be redirected to **high-capacity endpoints** and vice versa.
