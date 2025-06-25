@@ -1,7 +1,7 @@
 ---
 title: Modern Data Consistency - Consistent Hashing In Disk Partition & Database
 author: khangtictoc
-date: 2025-06-13 00:34:00 +0800
+date: 2025-10-01 00:34:00 +0800
 categories: [Theory]
 tags: [storage, database]
 ---

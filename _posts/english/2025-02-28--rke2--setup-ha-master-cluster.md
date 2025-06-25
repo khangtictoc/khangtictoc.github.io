@@ -1,7 +1,7 @@
 ---
 title: RKE2 - Install HA Master Cluster
 author: khangtictoc
-date: 2024-05-04 00:34:00 +0700
+date: 2025-02-28 00:34:00 +0700
 categories: [RKE2]
 tags: [intro, kubernetes]
 ---

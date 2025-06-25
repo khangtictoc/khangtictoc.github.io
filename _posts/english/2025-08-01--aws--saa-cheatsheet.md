@@ -1,7 +1,7 @@
 ---
 title: AWS Solution Architect Associate (SAA-C03) CheatSheet
 author: khangtictoc
-date: 2024-09-22 00:34:00 +0800
+date: 2025-08-01 00:34:00 +0800
 categories: [Tutorial]
 tags: [cloud, aws, certificate]
 ---
@@ -9,11 +9,20 @@ tags: [cloud, aws, certificate]
 
 ## Glossary
 
-**Hot storage**: refers to the storage that keeps frequently accessed data (hot data). 
+**Storage/Data Tier - Level of access**
 
-**Warm storage**: refers to the storage that keeps less frequently accessed data (warm data). 
-
-**Cold storage**: refers to the storage that keeps rarely accessed data (cold data). In terms of pricing, the colder the data, the cheaper it is to store, and the costlier it is to access when needed
+- Hot Storage
+  - Access Speed: Fastest, optimized for frequently accessed data.
+  - Cost: Most expensive due to performance optimization.
+  - Use Cases: High-performance computing, real-time analytics, frequently accessed applications. 
+- Warm Storage:
+  - Access Speed: Slower than hot storage, but still relatively quick.
+  - Cost: Less expensive than hot storage.
+  - Use Cases: Data used for reporting, analytics, or data that needs to be accessed occasionally but not frequently. 
+- Cold Storage:
+  - Access Speed: Slowest, with potential delays for retrieval.
+  - Cost: Least expensive.
+  - Use Cases: Archiving, long-term data retention, infrequently accessed data. 
 
 **Parallel file system**: 
 - Is a software component designed to store data across multiple networked servers. It facilitates high-performance access through simultaneous, coordinated input/output (I/O) operations between clients and storage nodes.
@@ -47,7 +56,7 @@ Read more: [https://khangtictoc.github.io/posts/storage-data-consistency-and-par
 
 **Canary deployment**
 
-## Services
+## Services Summary
 
 ### Storage
 
@@ -173,3 +182,22 @@ Typical storage services & its feature
 | Lambda  | No | Handle the bursts of traffic in seconds |
 
 
+## Distinguish
+
+### Streaming vs Queue services
+
+| Concept              | **Streaming Service**<br/>(e.g., Kinesis, Kafka)         | **Queue**<br/>(e.g., SQS)                        |
+|----------------------|----------------------------------------------------------|--------------------------------------------------|
+| **Type**             | Log-based stream<br/>(publish-subscribe model)           | Message queue<br/>(point-to-point model)         |
+| **Message delivery** | Multiple consumers can independently read the same data  | Message is processed once                        |
+| **Retention**        | Messages kept for fixed window<br/>(e.g., 24h–7d+)       | Message deleted after being consumed             |
+| **Ordering**         | Strong ordering (per shard/partition)                    | FIFO queues support ordering                     |
+| **Replaying**        | ✅ Yes – consumers can re-read from earlier point        | ❌ No – message is gone after deletion           |
+| **Use cases**        | Real-time analytics, stream processing, ETL              | Task queues, decoupling services                 |
+| **Scale**            | High throughput & parallelism per partition              | Simpler to scale horizontally                    |
+| **Latency**          | Low latency                                              | Slightly higher due to polling                   |
+| **Service**          | **Kafka, Amazon Kinesis**                                | **Amazon SQS, RabbitMQ
+
+> NOTE: 
+> - Amazon MQ is primarily used as a managed message broker service and not a queue
+> 

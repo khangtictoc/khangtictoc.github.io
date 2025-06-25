@@ -7,6 +7,7 @@ tags: [love, girl]
 ---
 
 ```Javascript
+let n = +inf
 For i = 1; i <=n; i++ {
   Bước 1: Tìm đối tượng
   Bước 2: Tán gái
@@ -14,4 +15,3 @@ For i = 1; i <=n; i++ {
 }
 ```
 
-let n = +inf

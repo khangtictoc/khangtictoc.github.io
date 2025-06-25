@@ -1,7 +1,7 @@
 ---
 title: Takoyaki Dominates The World
 author: khangtictoc
-date: 2024-09-22 00:34:00 +0800
+date: 2024-10-16 00:34:00 +0800
 categories: [Tutorial]
 tags: [cicd, pipelines, deployment]
 ---

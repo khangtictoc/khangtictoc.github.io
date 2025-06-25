@@ -1,7 +1,7 @@
 ---
 title: RKE2 - High Avaibility Testing & Experiments
 author: khangtictoc
-date: 2024-05-04 00:34:00 +0700
+date: 2025-05-28 00:34:00 +0700
 categories: [RKE2]
 tags: [intro, kubernetes]
 ---

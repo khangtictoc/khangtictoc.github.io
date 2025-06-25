@@ -10,14 +10,20 @@ tags: [cloud, aws]
 ## DynamoDB
 
 ### Main features
+- NoSQL database
 
 ### Configuration
 
-**DynamoDB Accelerator (DAX)** feature is primarily used to significantly improve the in-memory read performance of your database
+**DynamoDB Accelerator (DAX)** used to significantly improve the in-memory read performance of your database
 
-**A DynamoDB stream** is an ordered flow of information about changes to items in an Amazon DynamoDB table. When you enable a stream on a table, DynamoDB captures information about every modification to data items in the table.
+**A DynamoDB stream** is an ordered flow of information about changes to items in an Amazon DynamoDB table. When you enable a stream on a table, DynamoDB captures information about every modification to data items in the table to process further tasks
 
 **Amazon Kinesis Client Library (KCL)** is a coding module to write an application that leverages on DynamoDB Streams Kinesis Adapter that will fetch data from the DynamoDB Streams endpoint.
+
+**Point-in-Time Recovery (PITR)** is a backup features:
+- Take snapshot at any point of time
+- Store *short-term* snapshots
+- Optimized solution for **RPO/RTO** metric.
 
 ## Redshift
 
