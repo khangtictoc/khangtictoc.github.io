@@ -16,7 +16,7 @@ timezone:
 
 title: khangtictoc's Blog # the main title
 
-tagline: Penetration Testing & Infrastructure Security # it will display as the subtitle
+tagline: Penetration testing technique & Infrastructure security # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   A dreamer in hacking path and security in general
@@ -88,7 +88,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: dark # [light | dark]
+theme_mode: # [light | dark]
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url

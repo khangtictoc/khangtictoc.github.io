@@ -18,7 +18,7 @@ Look at the architecture below
 
 ![ArgoCD Architecture](assets/img/2025/argocd-intro/argocd_architecture.png)
 
-And then look straight ahead at the **stupid octopus's face**. That's our **ArgoCD**. 
+And then look straight ahead at this **stupid octopus's face**. That's our **ArgoCD**. 
 
 ArgoCD is a deployment tool used for deploying services on specific Kubernetes environment. It adapts **GitOps** mechanism which leverage **Git** source (many documents refer as 'sources of truth') to control the version of deployed infrastructure of Kubernetes environment. 
 Our responsibility now is to manage declarative configuration files and ArgoCD could perform an automation process to make the production environment match the described state in the repository
