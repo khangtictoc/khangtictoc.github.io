@@ -22,8 +22,8 @@
       'data-emit-metadata': '0',
       'data-theme': initTheme,
       'data-input-position': '{{ site.comments.giscus.input_position | default: 'bottom' }}',
-      'data-lang': lang,
-      'data-loading': 'lazy',
+      'data-lang': '{{ site.comments.giscus.lang }}',
+      'data-loading': '{{ site.comments.giscus.loading }}',
       crossorigin: 'anonymous',
       async: ''
     };
