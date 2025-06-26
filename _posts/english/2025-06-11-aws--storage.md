@@ -1,7 +1,7 @@
 ---
 title: AWS Services Summary - Storage
 author: khangtictoc
-date: 2025-09-15 00:34:00 +0800
+date: 2025-06-11 00:34:00 +0800
 categories: [Summary, AWS Services Series]
 tags: [cloud, aws]
 ---

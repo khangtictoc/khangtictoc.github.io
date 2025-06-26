@@ -1,7 +1,7 @@
 ---
 title: AWS Services Summary - Application Integration
 author: khangtictoc
-date: 2025-08-28 00:34:00 +0800
+date: 2025-06-11 00:34:00 +0800
 categories: [Summary, AWS Services Series]
 tags: [cloud, aws]
 ---
