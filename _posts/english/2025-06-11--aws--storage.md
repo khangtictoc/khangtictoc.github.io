@@ -45,7 +45,17 @@ Object Lock legal hold:
 
 
 
-## Elastic Filesystem Service (EFS)
+## Elastic Filesystem Storage (EFS)
 
 ### Configuration
 - **EFS lifecycle policies:** maximum days is only up to 365 days
+
+## Elastic Block Storage (EBS)
+
+### Configuration
+
+Amazon Data Lifecycle Manager (Amazon DLM): define policies that govern the lifecycle of these snapshots, ensuring regular backups are created and obsolete snapshots are automatically removed.
+
+## Amazon Storage Gateway 
+### Main Features
+- Used for creating a backup of data from your on-premises
