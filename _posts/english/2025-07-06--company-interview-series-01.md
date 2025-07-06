@@ -85,3 +85,4 @@ Quest: For a client in on-prem network, they need a way to use AWS credentials o
 11. What happens when 2 members apply terraform at the same time ? 
 12. If you have 1000 resources created manually that have not been appeared yet in Terraform state. How could you resolve this ? 
 13. If you have 1000 resources created by your Terraform in 3 environments (dev,uat, prd) in one single state file in S3 bucket, you want to migrate those resources into 3 separated state files for avoiding and minimalizing conflicts in state files when changes. How could you resolve this ? 
+14. (Remaining time) Culture fits
