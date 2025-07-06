@@ -17,8 +17,8 @@ I have no spoil which company is. This is a set of referenced questions for enha
 #### Git + Deploy
 
 1. How can you manage app deployment version in your project ? 
-   1.1 Describe about your release process. 
-   1.2 How can you resolve roll back activities ? 
+   - 1.1 Describe about your release process. 
+   - 1.2 How can you resolve roll back activities ? 
 2. How you manage tags to control microservices's Docker image ? 
 3. Some questions as a Git-managed repositories as a Senior Developers -> Forgot 
 
@@ -26,10 +26,10 @@ I have no spoil which company is. This is a set of referenced questions for enha
 
 1. Describe your pipeline workflow you have used in your project. 
 2. Do you integrate security DAST/SAST in your pipeline ? What is your current tools/solutions?  
-   2.1 How do you configure to manage whether that codebase is deployed to releasing environment or not? 
-   2.2 What is the metrics you use to evaluate the quality of code ? Do you understand the metrics ? What's it for ? 
+   - 2.1 How do you configure to manage whether that codebase is deployed to releasing environment or not? 
+   - 2.2 What is the metrics you use to evaluate the quality of code ? Do you understand the metrics ? What's it for ? 
 3. Can a Jenkins pipelines/jobs run on nodes that running Jenkins ? 
-   3.1 Do you use agent ? How does master nodes talk and give command to agent nodes ? Which port should be opened on master/agent nodes?
+   - 3.1 Do you use agent ? How does master nodes talk and give command to agent nodes ? Which port should be opened on master/agent nodes?
 
 #### Docker 
 
