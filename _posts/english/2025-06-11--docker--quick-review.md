@@ -62,7 +62,6 @@ Once built, a container image doesn’t change. The packaged image represents an
 Much alike traditional VM, isolated by default
 - Docker creates virtual networks using Linux kernel features like network namespaces.
 - Each container has its own network stack (IP address, routing table, etc.), isolated from other containers and the host.
-- Internal Docker DNS daemon is running at each container's loopback ip addresses range. View this at `/etc/resolv.conf`
 
 
 **Multiple Built-in Network Drivers**
@@ -80,21 +79,21 @@ Docker provides several network drivers, each defining a different mode of commu
 
 **🟦 Bridge Network (default)**
 
-> **NOTE**: Unlike *default bridge network*, a container run on *customed created bridge network* can resolve IP address by container name.
+> **NOTE**: Unlike *default bridge network*, a container run on *self-created bridge network* can resolve IP address by container name.
 
 Features:
-- Use embedded Internal DNS server `127.0.0.11`
+- Use embedded Internal DNS server `127.0.0.11`, inspect `/etc/resolv.conf`
 - Use NAT mechanism
 
 Testing steps:
-- Create or use default bridge network
-- Create 2 containers use this network
-- Ping each others, if customed network is used, we can perform ping on *container name*
+- Create new or use the default bridge network
+- Create 2 containers using this network
+- Ping each others, if self-created network is used, we can perform ping on *container name*
   
 **🟦 Host Network**
 
 Features:
-- Use WSL2/Docker Desktop’s DNS.
+- Use WSL2/Docker Desktop’s DNS, inspect `/etc/resolv.conf`
 - No separate interface. No NAT. Use host machine's network.
 
 Testing steps:
@@ -205,15 +204,130 @@ No one use Swarm any more. We use Kubernetes 😂
 
 ### Builder
 
+A **builder** is the environment that executes instructions in the Dockerfile.
+
+- Default: Each line creates a new intermediate layer.
+- `FROM` defines the base image (e.g., `alpine`, `node`, `python`, etc.)
+- **Custom builders**: You can use different base images via multi-stage builds.
+
+🔹 Common base images:
+
+- `scratch`: empty base, for minimal images
+- `alpine`: small size, good for production
+- `debian/ubuntu`: feature-rich, more packages available
+
+> **TIP:** Avoid unnecessary layers – keep commands concise (e.g., `RUN apt-get update && apt-get install -y curl`)
+
+---
+
 ### Variable
+
+**ARG** and **ENV** let you define variables.
+
+| Keyword | Scope           | Use Case                       |
+| ------- | --------------- | ------------------------------ |
+| `ARG`   | Build-time      | Conditional installs, flags    |
+| `ENV`   | Build & runtime | Configuration, secrets (light) |
+
+🔹 Examples:
+
+```Dockerfile
+ARG BASE_VERSION=1.0
+FROM myapp:${BASE_VERSION}
+
+ENV PORT=8080
+EXPOSE $PORT
+```
+
+> `ARG` is not accessible after build. `ENV` persists into the image.
+
+---
 
 ### Multi-platform
 
+Use Docker Buildx to build images for different architectures (e.g., `linux/amd64`, `linux/arm64`).
+
+🔹 Command:
+
+```bash
+docker buildx build --platform linux/amd64,linux/arm64 -t myimage:latest .
+```
+
+🔹 Useful for:
+
+- ARM devices (e.g., Raspberry Pi, Apple Silicon Macs)
+- CI/CD pipelines targeting multiple platforms
+
+> Requires **BuildKit** (enabled by default in modern Docker)
+
+---
+
 ### Multi-stages
+
+Optimize image size by separating build dependencies from runtime.
+
+🔹 Example:
+
+```Dockerfile
+# Stage 1: Build
+FROM golang:1.20 AS builder
+WORKDIR /app
+COPY . .
+RUN go build -o myapp
+
+# Stage 2: Runtime
+FROM alpine:latest
+COPY --from=builder /app/myapp /usr/local/bin/myapp
+CMD ["myapp"]
+```
+
+Benefits:
+
+- Clean image
+- Smaller size
+- No compiler/runtime bloat
+
+---
 
 ### BuildKit
 
+Modern build engine that improves speed, caching, and functionality.
+
+🔹 Features:
+
+- Parallel build steps
+- Secret mounting (`RUN --mount=type=secret`)
+- Better caching
+- Inline frontend features (e.g., `# syntax=docker/dockerfile:1.5`)
+
+🔹 Enable it:
+
+```bash
+export DOCKER_BUILDKIT=1
+```
+
+> Automatically enabled on recent Docker versions
+
+---
+
 ### Best practice
+
+💪 Do:
+
+- Use `.dockerignore` to reduce context size
+- Use multi-stage builds to keep image slim
+- Pin image versions (`FROM node:18-alpine`)
+- Combine `RUN` steps to reduce layers
+- Minimize `ADD`; prefer `COPY`
+- Use non-root users in production
+
+🚫 Avoid:
+
+- Hardcoding secrets
+- Installing unnecessary dev tools
+- Large base images
+
+
 
 ## More
 - Labels & Annotation (Image's metadata)

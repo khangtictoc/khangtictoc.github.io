@@ -4,7 +4,6 @@ author: khangtictoc
 date: 2024-09-22 00:34:00 +0800
 categories: [Tutorial]
 tags: [iaac]
-comment_footer: comments/giscus.html
 ---
 
 
