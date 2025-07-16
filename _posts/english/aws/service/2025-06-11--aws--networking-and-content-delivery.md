@@ -30,3 +30,11 @@ tags: [cloud, aws]
 > - Backend processes not efficiently
 > - Large data 
 > - ...
+
+## AWS Global Accelerator 
+### Main features
+- Suitable for non-HTTP use cases, such as gaming (UDP), IoT (MQTT), or Voice over IP, as well as for HTTP use cases that specifically require static IP addresses or deterministic, fast regional failover
+
+## AWS Network Firewall 
+### Main features
+- Supports domain name stateful network traffic inspection -> Create `Allow`  and `Deny` lists with domain names.

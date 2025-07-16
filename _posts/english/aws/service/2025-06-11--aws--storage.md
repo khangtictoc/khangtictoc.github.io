@@ -59,3 +59,9 @@ Amazon Data Lifecycle Manager (Amazon DLM): define policies that govern the life
 ## Amazon Storage Gateway 
 ### Main Features
 - Used for creating a backup of data from your on-premises
+- Providing low-latency access to data by caching frequently accessed data on-premises
+
+
+## AWS DataSync 
+### Main Features
+- Makes it simple and fast to move large amounts of data online between on-premises storage and Amazon S3, Amazon Elastic File System (Amazon EFS), or Amazon FSx for Windows File Server
