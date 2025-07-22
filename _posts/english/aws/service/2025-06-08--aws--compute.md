@@ -81,6 +81,14 @@ Steps:
 - Start `instance B`.
 - Verify the `instance B` with new snapshot `snapshot A`
 
+### Load Balancer 
 
+#### Application Load Balancer
 
+**Main features**
+- Layer-7 OSI load balancer
+- **Can not assign Elastic IP**
 
+#### Network Load Balancer
+- Layer-4 OSI load balancer
+- **Can assign Elastic IP**

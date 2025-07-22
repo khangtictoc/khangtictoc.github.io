@@ -35,6 +35,10 @@ tags: [cloud, aws]
 ### Main features
 - Suitable for non-HTTP use cases, such as gaming (UDP), IoT (MQTT), or Voice over IP, as well as for HTTP use cases that specifically require static IP addresses or deterministic, fast regional failover
 
-## AWS Network Firewall 
-### Main features
+
+## VPC
+### AWS Network Firewall 
+#### Main features
 - Supports domain name stateful network traffic inspection -> Create `Allow`  and `Deny` lists with domain names.
+- NOT AN INTEGRATION SERVICES to any other resources like ELB, API Gateway, ...
+- A feature that exists in VPC, created as a resource separately in VPC, **requires route table to route traffic** through it if we need to apply network policies.

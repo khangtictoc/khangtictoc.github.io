@@ -51,6 +51,9 @@ Object Lock legal hold:
 - **EFS lifecycle policies:** maximum days is only up to 365 days
 
 ## Elastic Block Storage (EBS)
+### Main Features
+- Snapshots are stored in S3 bucket.
+
 
 ### Configuration
 

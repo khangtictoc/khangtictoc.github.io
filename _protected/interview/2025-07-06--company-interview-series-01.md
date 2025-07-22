@@ -4,6 +4,7 @@ author: khangtictoc
 date: 2025-07-06 00:34:00 +0800
 categories: [Interview]
 tags: [tier 2, bank]
+layout: encrypted
 ---
 
 I have no spoil which company is. This is a set of referenced questions for enhancing personal technical skills
