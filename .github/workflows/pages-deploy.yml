@@ -59,12 +59,8 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add .
-          echo "checking secrets"
-          echo $GITHUB_TOKEN
           git commit -m "new: Creating encrypted posts"
-          git remote -v
           git push
-          
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB }}
 
