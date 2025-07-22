@@ -62,6 +62,7 @@ jobs:
           git commit -m "new: Creating encrypted posts"
           git remote -v
           git push
+          echo $GITHUB_TOKEN
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_GITHUB }}
 
