@@ -6,7 +6,6 @@ categories: [Tutorial]
 tags: [cloud, aws, certificate]
 ---
 
-
 ## Glossary
 
 **Storage/Data Tier - Level of access**
@@ -14,28 +13,31 @@ tags: [cloud, aws, certificate]
 - Hot Storage
   - Access Speed: Fastest, optimized for frequently accessed data.
   - Cost: Most expensive due to performance optimization.
-  - Use Cases: High-performance computing, real-time analytics, frequently accessed applications. 
+  - Use Cases: High-performance computing, real-time analytics, frequently accessed applications.
 - Warm Storage:
   - Access Speed: Slower than hot storage, but still relatively quick.
   - Cost: Less expensive than hot storage.
-  - Use Cases: Data used for reporting, analytics, or data that needs to be accessed occasionally but not frequently. 
+  - Use Cases: Data used for reporting, analytics, or data that needs to be accessed occasionally but not frequently.
 - Cold Storage:
   - Access Speed: Slowest, with potential delays for retrieval.
   - Cost: Least expensive.
-  - Use Cases: Archiving, long-term data retention, infrequently accessed data. 
+  - Use Cases: Archiving, long-term data retention, infrequently accessed data.
 
-**Parallel file system**: 
+**Parallel file system**:
+
 - Is a software component designed to store data across multiple networked servers. It facilitates high-performance access through simultaneous, coordinated input/output (I/O) operations between clients and storage nodes.
 - Parallel file system can span thousands of server nodes and manage petabytes of data. Users typically deploy high-speed networking, such as Fast Ethernet, InfiniBand and proprietary technologies, to **optimize the I/O path and enable greater bandwidth**.
 
 ![Parallel file system](assets/img/2025/aws/saa-cheatsheet/parallel_file_system_architecture.png)
 
 **Serverless**:
-- A cloud-native development model that allows to run applications without having to manage servers. 
-- It doesn’t mean there are no servers, it means the servers are abstracted away from application development. A cloud provider handles the routine work of provisioning, maintaining, and scaling the server infrastructure. 
+
+- A cloud-native development model that allows to run applications without having to manage servers.
+- It doesn’t mean there are no servers, it means the servers are abstracted away from application development. A cloud provider handles the routine work of provisioning, maintaining, and scaling the server infrastructure.
 - Serverless apps respond to demand and automatically **scale up or down as needed**. When a serverless function is sitting idle, it doesn’t cost anything.
 
-Reference: 
+Reference:
+
 - https://www.techtarget.com/searchstorage/definition/parallel-file-system
 - https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless
 
@@ -43,12 +45,10 @@ Reference:
 
 ![Parallel file system](assets/img/2025/aws/saa-cheatsheet/cors-overview.png)
 
-**High-cardinality (In database term)** refers to columns with values that are unique. High-cardinality column values are typically ID number, email, user name or *the combination of these*. 
+**High-cardinality (In database term)** refers to columns with values that are unique. High-cardinality column values are typically ID number, email, user name or _the combination of these_.
 In general definition, "High-cardinality" means the characteristic of multiple possible unique value of an object. There are many problem handling high-cardinality data structure like IOT scenario, database partitioning, ...
 
 Read more: [https://khangtictoc.github.io/posts/storage-data-consistency-and-partition/](https://khangtictoc.github.io/posts/storage-data-consistency-and-partition/)
-
-
 
 ## Common Architecture
 
@@ -57,12 +57,15 @@ Read more: [https://khangtictoc.github.io/posts/storage-data-consistency-and-par
 The **fan-out pattern** is a messaging or workload distribution pattern where a single message or task is sent to multiple downstream consumers or workers for parallel processing. It enhances scalability and decouples producers from consumers.
 
 #### How it Works
+
 - A producer sends a message to a central messaging system (e.g., a queue or topic).
 - The messaging system distributes ("fans out") the message to multiple consumers.
 - Each consumer processes the message independently, often in parallel.
 
 #### AWS Example
+
 In AWS, the fan-out pattern is commonly implemented using **Amazon SNS** (Simple Notification Service) and **SQS** (Simple Queue Service):
+
 - **Scenario**: An e-commerce platform processes an order by notifying services like inventory management, payment processing, and shipping.
 - **Implementation**:
   - An application publishes an order event to an SNS topic.
@@ -83,12 +86,14 @@ In AWS, the fan-out pattern is commonly implemented using **Amazon SNS** (Simple
 **Blue-green deployment** is a release strategy that reduces downtime and risk by maintaining two identical environments: one active (blue) and one idle (green). The new version is deployed to the green environment, tested, and then traffic is switched from blue to green.
 
 #### How it Works
+
 - **Blue Environment**: Current production environment serving live traffic.
 - **Green Environment**: New environment with the updated application, initially idle.
 - Traffic is switched from blue to green (e.g., via DNS or load balancer) after testing.
 - The blue environment remains available for rollback if issues arise.
 
 #### AWS Example
+
 - **Implementation**:
   - Use **AWS Elastic Load Balancer (ELB)** with **Auto Scaling Groups (ASGs)**.
   - Blue: ASG with the current version behind ELB.
@@ -108,12 +113,14 @@ In AWS, the fan-out pattern is commonly implemented using **Amazon SNS** (Simple
 **Canary deployment** is a release strategy where a new version is rolled out to a small subset of users for testing before a full deployment. It minimizes risk by validating the new version in production.
 
 #### How it Works
+
 - The new version (canary) runs alongside the stable version.
 - A small percentage of traffic (e.g., 5%) is routed to the canary version.
 - Monitoring tools check the canary’s performance (e.g., errors, latency).
 - Traffic is gradually shifted to the canary if it performs well, or rolled back if it fails.
 
 #### AWS Example
+
 - **Implementation**:
   - Use **AWS Application Load Balancer (ALB)** with **weighted target groups**.
   - Stable: Target group A (95% traffic).
@@ -247,30 +254,44 @@ Typical storage services & its feature
 
 **Overview comparison**
 
-
-| Service | Serverless? | Burst Capability |
-| ------- | ----------  | ---------------- |
-| EC2  | No | Handle the bursts of traffic in minutes |
-| ECS  | No | Handle the bursts of traffic in minutes |
-| Lambda  | No | Handle the bursts of traffic in seconds |
-
+| Service | Serverless? | Burst Capability                        |
+| ------- | ----------- | --------------------------------------- |
+| EC2     | No          | Handle the bursts of traffic in minutes |
+| ECS     | No          | Handle the bursts of traffic in minutes |
+| Lambda  | No          | Handle the bursts of traffic in seconds |
 
 ## Distinguish
 
 ### Streaming vs Queue services
 
-| Concept              | **Streaming Service**<br/>(e.g., Kinesis, Kafka)         | **Queue**<br/>(e.g., SQS)                        |
-|----------------------|----------------------------------------------------------|--------------------------------------------------|
-| **Type**             | Log-based stream<br/>(publish-subscribe model)           | Message queue<br/>(point-to-point model)         |
-| **Message delivery** | Multiple consumers can independently read the same data  | Message is processed once                        |
-| **Retention**        | Messages kept for fixed window<br/>(e.g., 24h–7d+)       | Message deleted after being consumed             |
-| **Ordering**         | Strong ordering (per shard/partition)                    | FIFO queues support ordering                     |
-| **Replaying**        | ✅ Yes – consumers can re-read from earlier point        | ❌ No – message is gone after deletion           |
-| **Use cases**        | Real-time analytics, stream processing, ETL              | Task queues, decoupling services                 |
-| **Scale**            | High throughput & parallelism per partition              | Simpler to scale horizontally                    |
-| **Latency**          | Low latency                                              | Slightly higher due to polling                   |
-| **Service**          | **Kafka, Amazon Kinesis**                                | **Amazon SQS, RabbitMQ
+| Concept              | **Streaming Service**<br/>(e.g., Kinesis, Kafka)        | **Queue**<br/>(e.g., SQS)                |
+| -------------------- | ------------------------------------------------------- | ---------------------------------------- |
+| **Type**             | Log-based stream<br/>(publish-subscribe model)          | Message queue<br/>(point-to-point model) |
+| **Message delivery** | Multiple consumers can independently read the same data | Message is processed once                |
+| **Retention**        | Messages kept for fixed window<br/>(e.g., 24h–7d+)      | Message deleted after being consumed     |
+| **Ordering**         | Strong ordering (per shard/partition)                   | FIFO queues support ordering             |
+| **Replaying**        | ✅ Yes – consumers can re-read from earlier point       | ❌ No – message is gone after deletion   |
+| **Use cases**        | Real-time analytics, stream processing, ETL             | Task queues, decoupling services         |
+| **Scale**            | High throughput & parallelism per partition             | Simpler to scale horizontally            |
+| **Latency**          | Low latency                                             | Slightly higher due to polling           |
+| **Service**          | **Kafka, Amazon Kinesis**                               | \*\*Amazon SQS, RabbitMQ                 |
 
-> NOTE: 
+> NOTE:
+>
 > - Amazon MQ is primarily used as a managed message broker service and not a queue
-> 
+
+### Differents in Streaming/Queue services
+
+| Concept             | Feature             | Use Case/Example                                                                                                                 |
+| ------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| Amazon MQ           |                     |
+| AppStream           |                     |
+| Data Firehose       | Process data stream | Integrate with another services like Lambda or similar ones to process data then bring those data for further action consumption |
+| Kinesis Data Stream | Consume data stream | Consume data in a stream for downstream tasks like analytics, query, ...                                                         |
+
+### Differents in "Interface" and "Gateway" VPC endpoint
+
+|                    | Interface                                                   | Gateway                   |
+| ------------------ | ----------------------------------------------------------- | ------------------------- |
+| Cost               | Pay an hourly rate for every provisioned Interface endpoint | Free                      |
+| Supported services | Most of services                                            | Only Amazon S3 & DynamoDB |

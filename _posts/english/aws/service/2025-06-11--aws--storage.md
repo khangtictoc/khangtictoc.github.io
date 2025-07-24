@@ -68,3 +68,9 @@ Amazon Data Lifecycle Manager (Amazon DLM): define policies that govern the life
 ## AWS DataSync 
 ### Main Features
 - Makes it simple and fast to move large amounts of data online between on-premises storage and Amazon S3, Amazon Elastic File System (Amazon EFS), or Amazon FSx for Windows File Server
+
+## AWS Backup
+
+### Main Features
+- Retention policy up to **unlimited** days. Automated backup for RDS Database supports **the maximum of 35 days** for retention policy 
+- Cross-account backup
