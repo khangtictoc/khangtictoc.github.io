@@ -132,18 +132,17 @@ Keep-in-mind:
 
 #### Instance state lifecycle
 
-![Restart an EC2 instance](assets/img/2025/aws/services-series/instance_lifecycle.png)
+![Instance state lifecycle](assets/img/2025/aws/services-series/instance_lifecycle.png)
 
 Below are the valid EC2 lifecycle instance states:
 
-- `pending` – The instance is preparing to enter the running state. An instance enters the pending state when it launches for the first time, or when it is restarted after being in the stopped state. -> **No Billed**
+| Instance state    | Description                                                                                                                                                                                                  | Instance usage billing |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------- |
+| **pending**       | The instance is preparing to enter the running state. An instance enters the pending state when it is launched or when it is started after being in the stopped state.                                       | Not billed             |
+| **running**       | The instance is running and ready for use.                                                                                                                                                                   | Billed                 |
+| **stopping**      | The instance is preparing to be stopped. **Note:** If you hibernate an instance, you're billed while the instance is in the stopping state.                                                                  | Not billed             |
+| **stopped**       | The instance is shut down and cannot be used. The instance can be started at any time.                                                                                                                       | Not billed             |
+| **shutting-down** | The instance is preparing to be terminated.                                                                                                                                                                  | Not billed             |
+| **terminated**    | The instance has been permanently deleted and cannot be started. **Note:** Reserved Instances that applied to terminated instances are billed until the end of their term according to their payment option. | Not billed             |
 
-- `running` – The instance is running and ready for use -> **Billed**
-
-- `stopping` – The instance is preparing to be stopped. Take note that you will not billed if it is preparing to stop however, **you will still be billed if it is just preparing to hibernate.**
-
-- `stopped` – The instance is shut down and cannot be used. The instance can be restarted at any time. -> **No Billed**
-
-- `shutting-down` – The instance is preparing to be terminated. -> **No Billed**
-
-- `terminated` – The instance has been permanently deleted and cannot be restarted. Take note that Reserved Instances that applied to terminated instances are still billed until the end of their term according to their payment option. -> **No Billed**
+Reference: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html#instance-billing-by-state
