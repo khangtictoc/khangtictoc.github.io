@@ -110,6 +110,8 @@ Keep-in-mind:
 - Go to the AWS Reserved Instance Marketplace and sell the Reserved instances.
 - Terminate the Reserved instances as soon as possible to avoid getting billed at the on-demand price when it expires.
 
+Reference: (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html)[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Stop_Start.html]
+
 ### Load Balancer
 
 #### Application Load Balancer
@@ -145,4 +147,6 @@ Below are the valid EC2 lifecycle instance states:
 | **shutting-down** | The instance is preparing to be terminated.                                                                                                                                                                  | Not billed             |
 | **terminated**    | The instance has been permanently deleted and cannot be started. **Note:** Reserved Instances that applied to terminated instances are billed until the end of their term according to their payment option. | Not billed             |
 
-Reference: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html#instance-billing-by-state
+Reference: (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html#instance-billing-by-state
+)[https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html#instance-billing-by-state
+]
