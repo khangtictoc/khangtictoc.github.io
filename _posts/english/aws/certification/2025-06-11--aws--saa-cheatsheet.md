@@ -1,10 +1,14 @@
 ---
-title: AWS Solution Architect Associate (SAA-C03) CheatSheet
+title: AWS Solution Architect Associate - CheatSheet
 author: khangtictoc
 date: 2025-06-11 00:34:00 +0800
 categories: [Tutorial]
 tags: [cloud, aws, certificate]
 ---
+
+# Intro
+
+Exam Code: SAA-C03
 
 # Glossary
 
