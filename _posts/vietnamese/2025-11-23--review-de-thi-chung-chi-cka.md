@@ -8,6 +8,12 @@ tags: [kubernetes]
 
 > **Lưu ý:** Đây là một bài viết không mấy vui vẻ sau 1 tiếng đồng hồ ngồi tịnh tâm sau khi thi và sau đó bị chó cắn tỉnh lại và lên bài, cân nhắc trước khi đọc
 
+- [Mở đầu (dành cho newbie)](#mở-đầu-dành-cho-newbie)
+- [Ôn luyện (có thể lướt qua)](#ôn-luyện-có-thể-lướt-qua)
+- [Trải nghiệm thi (phần chính)](#trải-nghiệm-thi-phần-chính)
+- [Độ khó đề](#độ-khó-đề)
+- [Vài lời cuối](#vài-lời-cuối)
+
 # Mở đầu (dành cho newbie)
 
 Sơ lược về Chứng chỉ CKA (Certified Kubernetes Administrator) có vẻ ai cũng biết rồi, đa số mọi người đều farm cái của của nợ này như một phần chặn đường leo núi để chinh phục **Kubestronaut**, nói thẳng là để có cái chiến lợi phẩm như bên dưới để phông bạt
