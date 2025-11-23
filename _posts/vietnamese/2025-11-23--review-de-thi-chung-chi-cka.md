@@ -6,7 +6,7 @@ categories: [Tiếng Việt, Certification, CNCF, CKA]
 tags: [kubernetes]
 ---
 
-> Lưu ý: Đây là một bài viết không mấy vui vẻ sau 1 tiếng đồng hồ ngồi tịnh tâm sau khi thi và sau đó bị chó cắn tỉnh lại và lên bài, cân nhắc trước khi đọc
+> **Lưu ý:** Đây là một bài viết không mấy vui vẻ sau 1 tiếng đồng hồ ngồi tịnh tâm sau khi thi và sau đó bị chó cắn tỉnh lại và lên bài, cân nhắc trước khi đọc
 
 # Mở đầu (dành cho newbie)
 
@@ -36,7 +36,7 @@ Phần này mình không muốn bàn nhiều, vì CKA là đề thi entry cho Ku
   - Xem playlist list [CKA-2k25](https://www.youtube.com/playlist?list=PLSsEvm2nF_8nGkhMyD1sq-DqjwQq8fAii) của bác [JayDemy](https://www.youtube.com/@jaydemytech)
 - [Killer Shell](https://killer.sh/dashboard): khó hơn xíu đề thi thật, làm gatekeeper tâm lý đảm bảo bạn sẵn sàng trước khi thi. Đây sẽ là **Simulator Test** khi bạn làm thủ tục đăng ký thi, chọn ngày thi, sau đó muốn làm lúc nào cũng được miễn trước giờ thi.
 
-> Bài học cột sống: Có thể tìm các câu hỏi đề thi thật theo từ khóa từ những câu hỏi bạn làm trên Killer Shell, sẽ có playlist như trên bao gồm câu hỏi các đề thi thật. Đề càng sát với mốc thời gian bạn gần thi thì càng gần giống tủ. Bằng cách này bạn có thể thi cert và tự học méo tốn một xu nào 😀
+> **Bài học cột sống:** Có thể tìm các câu hỏi đề thi thật theo từ khóa từ những câu hỏi bạn làm trên Killer Shell, sẽ có playlist như trên bao gồm câu hỏi các đề thi thật. Đề càng sát với mốc thời gian bạn gần thi thì càng gần giống tủ. Bằng cách này bạn có thể thi cert và tự học méo tốn một xu nào 😀
 
 **Tốn phí:**
 
