@@ -12,7 +12,7 @@ tags: [kubernetes]
 
 Sơ lược về Chứng chỉ CKA (Certified Kubernetes Administrator) có vẻ ai cũng biết rồi, đa số mọi người đều farm cái của của nợ này như một phần chặn đường leo núi để chinh phục **Kubestronaut**, nói thẳng là để có cái chiến lợi phẩm như bên dưới để phông bạt
 
-<p><img src="assets/img/2025/vietnamese/cncf/kubestronaut.png" alt="Kubestronaut" /></p>
+<p><img src="assets/img/2025/vietnamese/cncf/cka/kubestronaut.png" alt="Kubestronaut" /></p>
 
 Ngắn gọn thì bạn sẽ nhận được:
 
@@ -61,13 +61,13 @@ Về thủ tục, chỉ có hình thức online, bạn PHẢI vào phòng thi **
   - Dùng laptop thì ko được dùng màn hình rời, có thể dùng chuột rời
   - Sử dụng dàn PC, phải có webcam lưu động, cầm tay để quay không gian phòng hoặc quay chỗ điện thoại. Điện thoại sau cùng phải để ngoài tầm tay
 
-Trong lúc làm thủ tục, mình thấy các bước rất lằng nhằng. Cụ thể:
+Trong lúc làm thủ tục, các bước rất lằng nhằng. Cụ thể:
 
 - Lúc giám thị kêu mình quay mặt bằng, mình đã tinh tế lật pad chuột và đáy laptop lên, chứng mình là không có hạt cát nào dưới đó cả. Vậy mà cứ follow theo quy trình như một khúc củi mất não, vẫn nhắc mình lật 2 món ấy lên. Mà cứ mỗi món lại confirm một lần. Bạn cứ tưởng tượng là timeline diễn ra như này: Nhờ m quay mặt bàn -> Được chưa anh -> Oke em -> Nhờ m lật pad chuột -> Được chưa anh -> Oke em -> Nhờ m lật đít laptop -> Được chưa anh -> Oke em ... Mình tưởng cứ như đang Deja Vu về quá khứ ấy chứ.
 
 - Mọi thứ cứ tiếp diễn như thế cho đến khi vượt qua cả thời điểm book giờ làm bài (không tính trong thời gian làm bài thật), mất thời gian VCL, muốn vô sớm thi sớm mà cứ hoạnh họe cái căn phòng như túp lếu lều của mình
 
-<p><img src="assets/img/2025/vietnamese/cncf/house.png" alt="house" /></p>
+<p><img src="assets/img/2025/vietnamese/cncf/cka/house.png" alt="house" /></p>
 
 - Trong khi làm thủ tục thì sẽ xổ ra một tràng những nội quy cho mình biết, cứ xổ ra tin nhắn liên tục, nhưng khi scan phòng thì chậm như người không não. Cứ tưởng nói chuyện với AI.
 
@@ -75,15 +75,15 @@ Lần đầu thi mình cũng ko biết về chuyện các đường link officia
 
 **Lúc thi:** Vô làm sẽ có UI tour hướng dẫn sơ cho mình, nếu ready thì sẽ nhấn nút START để làm bài, sau đó countdown sẽ đếm ngược cho đến khi kết thúc bài thi hoặc mình tự kết thúc sớm.
 
-Trong lúc thi, mạng chỗ mình lag, mình có lỡ chửi DUMA bị nhắc 1 lần, thôi thì âu cơ này lỗi từ cá nhân, không sao cứ bình thản làm tiếp. Sau đó có một số trường đoạn mình lẩm bẩm đọc đề -> Nhắc thêm 1 lần nữa, proctor nói thêm phát nữa là mầy cooked! T sẽ terminated exam này. Nghe hết hồn , mình vẫn ôm bụng chửi xàm cứt, nhưng vẫn bình thản im lặng khóa mồm làm tiếp.
+Trong lúc làm bài, mạng chỗ mình lag, mình có lỡ chửi DUMA bị nhắc 1 lần, thôi thì âu cơ này lỗi từ cá nhân, không sao cứ bình thản làm tiếp. Sau đó có một số trường đoạn mình lẩm bẩm đọc đề -> Nhắc thêm 1 lần nữa, proctor nói thêm phát nữa là mầy cooked! T sẽ terminated exam này. Nghe hết hồn , mình vẫn ôm bụng chửi xàm cứt, nhưng vẫn bình thản im lặng khóa mồm làm tiếp.
 
 Thời gian tiếp tục trôi, lâu lâu mình có tính "xấu" là suy nghĩ hay bỏ tay lên miệng lúc suy nghĩ, nhưng mà cũng 2-3 giây thôi.
 
-<p><img src="assets/img/2025/vietnamese/cncf/thinking.png" alt="thinking" /></p>
+<p><img src="assets/img/2025/vietnamese/cncf/cka/thinking.png" alt="thinking" /></p>
 
 Thế là lại nhắc, kêu không được che mặt. +1 xàm shit, suýt nữa lại mở mồm chửi DUMA. 🔨. Ô hay, vậy khi thi rồi là ong đốt vào cơ mặt vẫn phải gồng đít lên ngồi nhịn à❓
 
-Thế là mình cứ tiếp tục làm, không làm bất cứ hành vi gì lạ và hoàn thành bài thi.
+Thế là mình cứ tiếp tục làm, không làm bất cứ hành vi gì lạ, lâu lâu móc mũi nhưng nhớ ông proctor Bot AI thì dừng lại, rồi hoàn thành bài thi, ez game 🎭.
 
 # Độ khó đề
 
@@ -94,7 +94,9 @@ Bản thân mình thấy đề thi khá dễ, có thể nói là rất dễ nế
 - Lúc thi sẽ cho 3 lần break time, mỗi lần 15 phút. Nếu bạn cảm thấy ngứa ngáy hay khó chịu gì trong người hãy tận dụng. <Đừng như mình>
 - Nếu bị rớt mạng sẽ được reschedule sang lịch mới, đừng như mình chửi thề bị nhắc
 
-Cuối cùng, nếu bị mệt/ốm, đau nhức hay ong chích, đảm bảo hãy brainstorm và chuẩn bị vài pài văn mẫu chửi rủa để report lên cho Linux Foundation vì khả năng cao giám thị sẽ không hiểu ngôn từ của bạn và cho bạn rớt. ☠️
+Cuối cùng, nếu bị mệt/ốm, đau nhức hay ong chích, đảm bảo hãy brainstorm và chuẩn bị vài pài văn mẫu chửi rủa để report lên cho Linux Foundation vì khả năng cao giám thị sẽ không hiểu ngôn từ của bạn và cho bạn rớt ☠️. Nói chung là mình vẫn iu quý cái tổ chức này lắm
+
+<p><img src="assets/img/2025/vietnamese/cncf/cka/twoface.png" alt="twoface" /></p>
 
 # Vài lời cuối
 
