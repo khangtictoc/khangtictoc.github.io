@@ -11,8 +11,8 @@ tags: [kubernetes]
 - [Mở đầu (dành cho newbie)](#mở-đầu-dành-cho-newbie)
 - [Ôn luyện (có thể lướt qua)](#ôn-luyện-có-thể-lướt-qua)
 - [Trải nghiệm thi (phần chính)](#trải-nghiệm-thi-phần-chính)
-- [Độ khó đề](#độ-khó-đề)
-- [Vài lời cuối](#vài-lời-cuối)
+  - [Độ khó đề](#độ-khó-đề)
+  - [Vài lời cuối](#vài-lời-cuối)
 
 # Mở đầu (dành cho newbie)
 
@@ -28,7 +28,7 @@ Ngắn gọn thì bạn sẽ nhận được:
 - 5 voucher 50% giảm giá để bạn phân phát và lùa gà những người anh em khác
 - 20% giảm giá các sự kiện cần mua vé của KubeCon và Kubeday một năm
 
-Ngoài ra bạn còn xứng tên vào danh sách vàng gương mặt tiêu biểu, tham khảo nguồn sau: (https://www.cncf.io/training/kubestronaut/?_sft_lf-country=vn)[Những người Việt Nam vượt khó]
+Ngoài ra bạn còn xứng tên vào danh sách vàng gương mặt tiêu biểu, tham khảo nguồn sau: [Những người Việt Nam vượt khó](https://www.cncf.io/training/kubestronaut/?_sft_lf-country=vn)
 
 Nếu bạn đạt được thành tựu này, tức là có cả kiến thức gần như toàn vẹn về Kubernetes (CKA, CKAD, CKS, KCNA, KCSA), nghĩa là nhà tuyển dụng hay bất kỳ kỹ sư trong nghề sẽ nhìn bạn như một người bị mất **~50 triệu VND ~> 1835$** (rẻ hơn nếu mua bundle) chỉ để mua con tem dán lên cái áo 🐸
 
@@ -52,7 +52,7 @@ Trường hợp của mình thì ban đầu tính không ôn luyện, dựa vào
 
 # Trải nghiệm thi (phần chính)
 
-**Trước khi thi**: mình có đọc kinh nghiệm chia sẻ của 1 bài review trên Viablo: (https://viblo.asia/p/cka-review-ky-thi-cka-va-kinh-nghiem-xuong-mau-rut-ra-sau-khi-thi-2oKLn2oaLQO)[[CKA] Review kỳ thi CKA và kinh nghiệm xương máu rút ra sau khi thi]
+**Trước khi thi**: mình có đọc kinh nghiệm chia sẻ của 1 bài review trên Viablo: [[CKA] Review kỳ thi CKA và kinh nghiệm xương máu rút ra sau khi thi](https://viblo.asia/p/cka-review-ky-thi-cka-va-kinh-nghiem-xuong-mau-rut-ra-sau-khi-thi-2oKLn2oaLQO)
 
 Bài viết khá hay và chân thật, 1 real Use Case đã xảy ra với bác này. Nói chung mình cũng chuẩn bị tâm lý, 69 tư thế sẵn sàng chuẩn bị đánh trận, ném hết đồ đạc vướng víu trên bàn ra ngoài cửa sổ.
 
@@ -91,7 +91,7 @@ Thế là lại nhắc, kêu không được che mặt. +1 xàm shit, suýt nữ
 
 Thế là mình cứ tiếp tục làm, không làm bất cứ hành vi gì lạ, lâu lâu móc mũi nhưng nhớ ông proctor Bot AI thì dừng lại, rồi hoàn thành bài thi, ez game 🎭.
 
-# Độ khó đề
+## Độ khó đề
 
 Bản thân mình thấy đề thi khá dễ, có thể nói là rất dễ nếu bạn đã làm ít nhất 6 tháng đến 1 năm k8s và ôn tủ 1,2 đề + simulator test là thi được. Bài thi 120' nhưng mình làm vẫn dư hơn 30', nói chung là thong thả về độ khó bạn cứ yên tâm về việc đạt được mục tiêu 🎯 66% qua môn.
 
@@ -104,7 +104,7 @@ Cuối cùng, nếu bị mệt/ốm, đau nhức hay ong chích, đảm bảo h�
 
 <p><img src="assets/img/2025/vietnamese/cncf/cka/twoface.png" alt="twoface" /></p>
 
-# Vài lời cuối
+## Vài lời cuối
 
 Thực sự trong quá trình thì contact với proctor quá tệ, bắt bẻ làm mình mất tập trung, giá tiền hiện tại để thi cert CKA là $465 (2025), tức đã tăng giá so với năm ngoái 2024 là $395, nhưng mà chất lượng thì đi ngược. Đôi khi mình hoài nghi proctor là BOT, không phải TOP⚠️
 
