@@ -24,7 +24,7 @@ Ngắn gọn thì bạn sẽ nhận được:
 
 Ngoài ra bạn còn xứng tên vào danh sách vàng gương mặt tiêu biểu, tham khảo nguồn sau: (https://www.cncf.io/training/kubestronaut/?_sft_lf-country=vn)[Những người Việt Nam vượt khó]
 
-Nếu bạn đạt được thành tựu này, tức là có cả kiến thức gần như toàn vẹn về Kubernetes (CKA, CKAD, CKS, KCNA, KCSA), nghĩa là nhà tuyển dụng hay bất kỳ kỹ sư trong nghề sẽ nhìn bạn như một người bị mất ~50 triệu VND (1835$, rẻ hơn nếu mua bundle) chỉ để mua con tem dán lên cái áo 🐸
+Nếu bạn đạt được thành tựu này, tức là có cả kiến thức gần như toàn vẹn về Kubernetes (CKA, CKAD, CKS, KCNA, KCSA), nghĩa là nhà tuyển dụng hay bất kỳ kỹ sư trong nghề sẽ nhìn bạn như một người bị mất **~50 triệu VND ~> 1835$** (rẻ hơn nếu mua bundle) chỉ để mua con tem dán lên cái áo 🐸
 
 # Ôn luyện (có thể lướt qua)
 
