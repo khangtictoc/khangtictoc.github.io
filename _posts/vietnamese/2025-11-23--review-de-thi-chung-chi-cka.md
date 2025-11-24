@@ -8,7 +8,7 @@ tags: [kubernetes]
 
 > **Lưu ý:** Đây là một bài viết không mấy vui vẻ sau 1 tiếng đồng hồ ngồi tịnh tâm sau khi thi và sau đó bị chó cắn tỉnh lại và lên bài, cân nhắc trước khi đọc.
 
-> Bài viết này không tập trung vào câu hỏi thí, mà chủ yếu là thủ tục và quá trình thi
+> Bài viết này không tập trung vào câu hỏi thi, mà chủ yếu là thủ tục và quá trình thi
 
 - [Mở đầu (dành cho newbie)](#mở-đầu-dành-cho-newbie)
 - [Ôn luyện (có thể lướt qua)](#ôn-luyện-có-thể-lướt-qua)
@@ -124,6 +124,8 @@ Thực sự trong quá trình thì contact với proctor quá tệ, bắt bẻ l
 
 Linux Foundation là một tổ chức lớn nhưng bố trí kỳ thi rất lạ lùng. Bài viết này công kick công khai nhưng cũng mong nếu nhân viên có đọc được thì nên có sự thay đổi về quy trình, giá tiền hoặc cách thức thi hợp lý, không làm được thì có thể nghỉ việc 😒
 
-Sau cùng thì nếu bạn nào muốn thi CKA thì tiếp tục theo đuổi, kiến thức k8s có thể trau dồi bằng kinh nghiệm và tự học, không cần phải qua thi thố hoặc sách vở 📖. Đôi khi công ty bắt bạn đi thi để làm đẹp hồ sơ, đánh dự án ầm ầm và kiến thức của CKA không phải là đồ bỏ, cũng giúp mình cũng cố và review lại sau quãng thời gian làm việc với cụm tự trị k8s. Nếu bạn hay người thân bạn bè chuẩn bị thi thì hãy ĐỌC BÀI NÀY để hình dung được những viễn cảnh vãi ò có thể xảy ra. Chúc các bạn thành công trong kỳ thi này 💖💖💖
+Sau cùng thì nếu bạn nào muốn thi CKA thì tiếp tục theo đuổi, kiến thức k8s có thể trau dồi bằng kinh nghiệm và tự học, không cần phải qua thi thố hoặc sách vở 📖. Đôi khi công ty bắt bạn đi thi để làm đẹp hồ sơ, đánh dự án ầm ầm và kiến thức của CKA không phải là đồ bỏ, cũng giúp mình cũng cố và review lại sau quãng thời gian làm việc với cụm tự trị k8s. Nếu bạn hay người thân bạn bè chuẩn bị thi thì hãy ĐỌC BÀI NÀY để hình dung được những viễn cảnh vãi ò có thể xảy ra. 
+
+Chúc các bạn thành công trong kỳ thi này 💖💖💖
 
 _Update thông tin mới nhất: Mình được 86%/66% => PASS ✅ (Không biết sai ở đâu vì mình làm hết, thôi kệ 🙃)_
