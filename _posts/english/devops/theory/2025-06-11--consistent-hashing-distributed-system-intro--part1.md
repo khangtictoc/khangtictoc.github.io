@@ -1,5 +1,5 @@
 ---
-title: Consistent Hashing Algorithm In Disk & Database
+title: Consistent Hashing In Distributed System (Part 1)
 author: khangtictoc
 date: 2025-06-11 00:34:00 +0800
 categories: [Theory]
@@ -9,8 +9,13 @@ tags: [storage, database]
 ## 🧾 Goal
 
 - Simulate how keys are mapped to partitions (nodes) using **Consistent Hashing**.
-- Then simulate what happens when you add a new partition.
-- Show how only some keys are remapped (not all, unlike naive hash % N).
+- Then simulate what happens when you add a new partition -> How only some keys are remapped (not all, unlike naive hash % N).
+
+## 🕶️ Context
+
+- Problem: We have `N` nodes and an amount of data. How can we store these data into `N` nodes.
+- Initial thinking: If using basic formula hash function `f(x) = x % N where x represents data` then whenever adding nodes will calculate the whole system
+  -> Idea: Set a number `(min_value, max_value)` as a range (we call hash ring) independently from the `N` nodes. We calculate the hash data `f(x)` to distribute them into hash ring
 
 ## ⚙️ Setup
 
@@ -100,15 +105,7 @@ tags: [storage, database]
  eve,dave    alice         bob        charlie
 ```
 
-## 🧠 Why Consistent Hashing is Great
-
-| Feature                     | Benefit                   |
-| --------------------------- | ------------------------- |
-| Key hash independent of `N` | Stable unless key changes |
-| Only a subset of keys move  | Scales easily             |
-| Balanced load (with vnodes) | More even distribution    |
-
-## 🧮 How Do We Get Node D at Hash Position 50?
+## 🧮 How Do We Determine Node D at which Hash Position?
 
 ### ✅ Short Answer
 
@@ -143,14 +140,13 @@ def get_ring_position(node_id, ring_size=100):
 get_ring_position("NodeD")  # → e.g., 50
 ```
 
-## 🎯 Bonus: Why Use Virtual Nodes?
+## 🧠 Why Consistent Hashing is Great
 
-| Node   | Virtual Node Positions |
-| ------ | ---------------------- |
-| Node D | 50, 73, 91             |
-
-- Using **virtual nodes** (multiple positions per node) helps avoid uneven load.
-- This is especially useful if nodes end up clustered in the hash space.
+| Feature                     | Benefit                   |
+| --------------------------- | ------------------------- |
+| Key hash independent of `N` | Stable unless key changes |
+| Only a subset of keys move  | Scales easily             |
+| Balanced load (with vnodes) | More even distribution    |
 
 ## 🌍 Real-World Uses of Consistent Hashing
 
@@ -227,3 +223,14 @@ Consistent hashing is widely used in modern distributed systems for scalability,
 - Each **key** is hashed into a number (0–99).
 - It’s then assigned to the **next node clockwise**.
 - When you **add a new node**, only **some keys** (between previous and new node) are remapped.
+
+## 🎯 Bonus: Why Use Virtual Nodes?
+
+| Node   | Virtual Node Positions |
+| ------ | ---------------------- |
+| Node D | 50, 73, 91             |
+
+- Using **virtual nodes** (multiple positions per node) helps avoid uneven load.
+- This is especially useful if nodes end up clustered in the hash space.
+
+➡️ Go to see some problem and introduce solution name **virtual nodes**
