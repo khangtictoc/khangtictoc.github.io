@@ -12,19 +12,14 @@ tags: [intro, kubernetes]
   - [Worker Node (Agent)](#worker-node-agent)
 - [Verify](#verify)
 
-
-
 ## Prerequisites
+
 ## Installation
-
-
-
 
 ### Master Node
 
 ### Worker Node (Agent)
 
 ## Verify
-
 
 > **Next:** [[Set up] Install New Cluster with HA Master](https://khangtictoc.github.io/posts/rke2-series/)
