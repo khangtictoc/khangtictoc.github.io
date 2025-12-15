@@ -1,5 +1,5 @@
 ---
-title: Consistent Hashing In Distributed Systems — (Weighted) Virtual Nodes (Part 2 - END)
+title: Consistent Hashing In Distributed Systems (Part 2 - END)
 author: khangtictoc
 date: 2025-06-20 00:34:00 +0800
 categories: [Theory]
