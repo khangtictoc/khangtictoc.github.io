@@ -17,4 +17,4 @@ This blog aims to talk about:
   - Shoot the breeze, discuss meaningless stories in working experience
   - Tips for travel, shoppings, using public services, etc, ...
 
-[Go to my CV](https://khangtictoc.github.io/myportfolio/)
+[Visit My Portfolio](https://khangtictoc.github.io/myportfolio/)
