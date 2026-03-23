@@ -86,6 +86,8 @@ Tất cả 3 cert trước thi đều nhận mail sau khi thi xong. Nhưng mà l
 
 Nói chung đề thi dễ, không cần ôn quá nhiều cho kịch tính, mình ôn 3 tuần nhưng suggest 2 lần để thi cho hồi hộp. Đề thi hay + học được nhiều. Còn 1 cert nữa là thành phi hành gia.
 
+Hơi tiếc là mấy cái admission liên quan tới OPA thực tế có nhu cầu dùng nhiều, tính thực tiễn cao mà Cert không includes vào, chắc nhiều quá rồi. OPA cũng là một chuyên đề lớn
+
 **Kết quả**: `86%/67%`
 
 ---
