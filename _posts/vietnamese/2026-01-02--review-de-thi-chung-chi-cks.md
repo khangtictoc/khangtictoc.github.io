@@ -30,33 +30,33 @@ tags: [kubernetes]
     - Thường đề sẽ cho use case 1 pod đang phá gì đó (đọc file nhạy cảm, connect to domain ngoài, ...). -> Tìm pod thủ phạm -> **Scale down Deployment**
     - Có 2 hướng:
       - Cách 1: Đi xuôi (Nếu có falco) -> Viết rule -> Trigger rule -> Lấy được **ContainerID** (hoặc có khi ra tên pod luôn) -> Tìm tên pod theo ContainerID bằng lệnh `docker`, `crictl` hoặc `podman`. Không cần dùng `strace`
-      - Cách 2: Đi ngược, tìm mù quáng (thường scope giới hạn theo đề, namespace nào đó, một trong 3 pods, ...) -> Lấy đại 1 pod -> Tìm **ContainerID** theo tên pod bằng lệnh `docker`, `crictl` hoặc `podman` -> Inspect ContainerID -> Lấy được ProcessID -> Dùng lệnh `ps aux | grep` để xem ProcessID (nếu bước trước chỉ lấy được ProcessName) -> `strace -Cw` theo ProcessID -> Xem thử có syscall tương ứng không -> Tiếp tục vét cạn. Thường khó như này chỉ có trong Simulator, Don't worry!
+      - Cách 2: Đi ngược, tìm mù quáng (thường scope giới hạn theo đề, namespace nào đó, một trong 3 pods, ...) -> Lấy đại 1 pod -> Tìm **ContainerID** theo tên pod bằng lệnh `docker`, `crictl` hoặc `podman` -> Inspect ContainerID -> Lấy được _ProcessID_ -> Dùng lệnh `ps aux | grep` để xem _ProcessID_ (nếu bước trước chỉ lấy được _ProcessName_) -> `strace -Cw` theo _ProcessID_ -> Xem thử có syscall tương ứng không -> Tiếp tục vét cạn. Thường khó như này chỉ có trong Simulator, Don't worry!
   - Viết manifest Ingress có thêm TLS Certificate. Reference trong doc [https://kubernetes.io/](https://kubernetes.io/)
-  - Network Policy Calico: Dễ , duplicate với CKA. Phải làm chủ viết rule theo bất kỳ yêu cầu nào.
-  - Network Policy Cilium: Same với cái trên. 1 chuyên đề lớn cần luyện + Thêm 1 điểm là hơi khó với người mới, target là luôn phải tìm cách search hiệu quả khi vô thi. Làm quen với UI Doc của Cilium: [https://docs.cilium.io/en/latest/security/policy/index.html](https://docs.cilium.io/en/latest/security/policy/index.html)
-  - Protect Metadata endpoint (trên AWS, GCP thường thấy vụ này): Cái này chỉ cần thành thạo viết Network Policy là được, ko cần quá chú ý. Giải thích: Thông thường các cloud sẽ có endpoint để đọc thông tin server (metadata) khá nhạy cảm, nên restrict pod traffic access tới endpoint này.
+  - **Network Policy Calico**: Dễ , duplicate với CKA. Phải làm chủ viết rule theo bất kỳ yêu cầu nào.
+  - **Network Policy Cilium**: Same với cái trên. 1 chuyên đề lớn cần luyện + Thêm 1 điểm là hơi khó với người mới, target là luôn phải tìm cách search hiệu quả khi vô thi. Làm quen với UI Doc của Cilium: [https://docs.cilium.io/en/latest/security/policy/index.html](https://docs.cilium.io/en/latest/security/policy/index.html)
+  - **Protect Metadata endpoint** (trên AWS, GCP thường thấy vụ này): Cái này chỉ cần thành thạo viết Network Policy là được, ko cần quá chú ý. Giải thích: Thông thường các cloud sẽ có endpoint để đọc thông tin server (metadata) khá nhạy cảm, nên restrict pod traffic access tới endpoint này.
   - Xác minh sự toàn vẹn của tệp binary. Thường đề cho dùng `sha512sum`.
-  - Thành thạo tạo clusterrole, role, binding các thể loại.
+  - Thành thạo tạo _clusterrole, role, binding_ các thể loại.
   - Cấu hình các flags của `kube-apiserver` sao cho secure hơn, ý này thật ra chỉ cần biết chạy CIS benchmark rồi fix. Không có gì đặc biệt
-  - Cấu hình Docker engine sao cho secure hơn. Ghi nhớ trong đầu luôn đường dẫn `/etc/docker/daemon.json` để vào làm cho nhanh. Còn lại reference vào [https://docs.docker.com/get-started/introduction/](https://docs.docker.com/get-started/introduction/)
-  - Biết cấu hình AppArmor, check xem modules các module nào đang được load trên kernel (của node đó), load modules vào kernel, sử dụng tên module trong pod template. Reference trong doc [https://kubernetes.io/](https://kubernetes.io/)
-  - Biết cấu hình Seccomp. Đường dẫn mặc định Seccomp load ở đâu ? Cho sẵn file Seccomp -> Ném vào path mặc định. Load Seccomp profile trong pod template. Reference trong doc [https://kubernetes.io/](https://kubernetes.io/)
-  - Pod Security Standard: Cho điểm, cấu hình nhanh vào labels của namespace rồi verify xem security policy đó áp dụng lên pods mới hay chưa. Reference trong doc [https://kubernetes.io/](https://kubernetes.io/)
-  - Manage Kubernetes secrets: Cho điểm, CKA đã covers, map vào pod thành volumes, readonly, environment variables.
+  - **Cấu hình Docker engine** sao cho secure hơn. Ghi nhớ trong đầu luôn đường dẫn `/etc/docker/daemon.json` để vào làm cho nhanh. Còn lại reference vào [https://docs.docker.com/get-started/introduction/](https://docs.docker.com/get-started/introduction/)
+  - Biết cấu hình **AppArmor**, check xem modules các module nào đang được load trên kernel (của node đó), load modules vào kernel, sử dụng tên module trong pod template. Reference trong doc [https://kubernetes.io/](https://kubernetes.io/)
+  - Biết cấu hình **Seccomp**. Đường dẫn mặc định Seccomp load ở đâu ? Cho sẵn file Seccomp -> Ném vào path mặc định. Load Seccomp profile trong pod template. Reference trong doc [https://kubernetes.io/](https://kubernetes.io/)
+  - **Pod Security Standard**: Cho điểm, cấu hình nhanh vào labels của namespace rồi verify xem security policy đó áp dụng lên pods mới hay chưa. Reference trong doc [https://kubernetes.io/](https://kubernetes.io/)
+  - Manage **Kubernetes secrets**: Cho điểm, CKA đã covers, map vào pod thành volumes, readonly, environment variables.
   - Tạo Runtimeclass: Cho điểm. Manifest có sẵn hết, các field không đổi gì nhiều. Reference trong doc [https://kubernetes.io/](https://kubernetes.io/)
-  - Pod-to-Pod encryption (Cilium, Istio): Cho điểm, cấu hình cực dễ nhưng không check được. Cũng nên làm quen với doc[Cilium](https://docs.cilium.io/en/latest/security/policy/index.html) và [Istio](https://istio.io/latest/docs/)
-  - Static analysis: Tự đánh giá 1 file Dockerfile hoặc Manifest (Pod, Statefulset, Deployment, ...) file nào insecure
+  - **Pod-to-Pod encryption** (Cilium, Istio): Cho điểm, cấu hình cực dễ nhưng không check được. Scope đề thi rất nhỏ. Cũng nên làm quen với doc[Cilium](https://docs.cilium.io/en/latest/security/policy/index.html) và [Istio](https://istio.io/latest/docs/)
+  - **Static analysis**: Tự đánh giá 1 file Dockerfile hoặc Manifest (Pod, Statefulset, Deployment, ...) file nào insecure
     - Dockerfile:
-      - Mấy line có copy secret ngoài vào 1 file `/tmp`, sau đó line tiếp theo có `rm` file /tmp đó. Bản chất Docker image layer vẫn lưu lại -> Insecure
+      - Mấy line có copy secret ngoài vào 1 file `/tmp`, sau đó line tiếp theo có `rm` file `/tmp` đó. Bản chất Docker image layer vẫn lưu lại -> Insecure
       - Hard-coded secrets, token,... Quá rõ ràng
       - User ROOT -> Tùy để nói có bỏ qua hay không
     - Manifest:
       - Hard-coded secrets, token,... Quá rõ ràng
       - SecurityContexts: Các trường như `runAsUser: 0`, `privileged: true`, `allowPrivilegesEscalation: true` , ... -> Cứ thấy là cho cook, insecure.
-  - Immutable pods: Cái khái niệm này hiêu rõ thì nên tìm hiểu. Trong scope CKS chỉ có 1 kiểu, `readOnlyRootFilesystem` phải là `true` -> `false` thì ko phải là immutable
-  - Cấu hình Audit logs: Cho điểm, practice cũng tốn tí thời gian để nắm được flow hoàn chỉnh. Reference trong doc [Audit](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/)
-  - Cấu hình Admission Hook: Cho điểm, cũng như trên, một chuyên đề nhỏ, 99% là ra `ImagePolicyWebhook` vì dễ test. Reference trong doc [ImagePolicyWebhook](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook)
-  - Cấu hình Falco Rule: Cho điểm, nhưng là chuyên đề lớn. Cần làm quen với doc Falco để thuần thục. Referent [Falco Rules](https://falco.org/docs/concepts/rules/).
+  - **Immutable pods**: Cái khái niệm này hiêu rõ thì nên tìm hiểu. Trong scope CKS chỉ có 1 kiểu, `readOnlyRootFilesystem` phải là `true` -> `false` thì ko phải là immutable
+  - Cấu hình **Audit logs**: Cho điểm, practice cũng tốn tí thời gian để nắm được flow hoàn chỉnh. Reference trong doc [Audit](https://kubernetes.io/docs/tasks/debug/debug-cluster/audit/)
+  - Cấu hình **Admission Hook**: Cho điểm, cũng như trên, một chuyên đề nhỏ, 99% là ra `ImagePolicyWebhook` vì dễ test. Reference trong doc [ImagePolicyWebhook](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#imagepolicywebhook)
+  - Cấu hình **Falco Rule**: Cho điểm, nhưng là chuyên đề lớn. Cần làm quen với doc Falco để thuần thục. Referent [Falco Rules](https://falco.org/docs/concepts/rules/).
   - Upgrade Kubernetes version cho master/worker nodes. CKA đã cover
 
 **Đề thi: 16 Questions**
