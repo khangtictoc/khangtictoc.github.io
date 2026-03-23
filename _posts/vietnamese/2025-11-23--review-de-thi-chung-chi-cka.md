@@ -1,5 +1,5 @@
 ---
-title: Đề thi CKA (Q4 - 2025) - Trải nghiệm như SHIT
+title: Đề thi CKA (Q4 - 2025) - Trải nghiệm như SHIT (Part 1)
 author: khangtictoc
 date: 2025-11-23 00:34:00 +0800
 categories: [Tiếng Việt, Certification, CNCF, CKA]
@@ -118,14 +118,29 @@ Cuối cùng, nếu bị mệt/ốm, đau nhức hay kiến cắn, đảm bảo 
 
 <p><img src="assets/img/2025/vietnamese/cncf/cka/twoface.png" alt="twoface" /></p>
 
+**Nội dung đề thi**
+
+Nằm trọn trong checklist của hãng: [Certified Kubernetes Administrator (CKA)](https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/)
+
+Mức độ:
+
+- Thuần thục command
+- Ít dùng manifest/declaration để apply hết sức có thể
+- Nhiều thứ, nhưng cơ bản, kindergaten
+- Gõ nhanh, nhanh tay, nhanh mắt , read fast là điểm cộng. Nice!
+
 ## Vài lời cuối
 
 Thực sự trong quá trình thì contact với proctor quá tệ, bắt bẻ làm mình mất tập trung, giá tiền hiện tại để thi cert CKA là $465 (2025), tức đã tăng giá so với năm ngoái 2024 là $395, nhưng mà chất lượng thì đi ngược. Đôi khi mình hoài nghi proctor là BOT, không phải TOP⚠️.
 
 Linux Foundation là một tổ chức lớn nhưng bố trí kỳ thi rất lạ lùng. Bài viết này công kick công khai nhưng cũng mong nếu nhân viên có đọc được thì nên có sự thay đổi về quy trình, giá tiền hoặc cách thức thi hợp lý, không làm được thì có thể nghỉ việc 😒
 
-Sau cùng thì nếu bạn nào muốn thi CKA thì tiếp tục theo đuổi, kiến thức k8s có thể trau dồi bằng kinh nghiệm và tự học, không cần phải qua thi thố hoặc sách vở 📖. Đôi khi công ty bắt bạn đi thi để làm đẹp hồ sơ, đánh dự án ầm ầm và kiến thức của CKA không phải là đồ bỏ, cũng giúp mình cũng cố và review lại sau quãng thời gian làm việc với cụm tự trị k8s. Nếu bạn hay người thân bạn bè chuẩn bị thi thì hãy ĐỌC BÀI NÀY để hình dung được những viễn cảnh vãi ò có thể xảy ra. 
+Sau cùng thì nếu bạn nào muốn thi CKA thì tiếp tục theo đuổi, kiến thức k8s có thể trau dồi bằng kinh nghiệm và tự học, không cần phải qua thi thố hoặc sách vở 📖. Đôi khi công ty bắt bạn đi thi để làm đẹp hồ sơ, đánh dự án ầm ầm và kiến thức của CKA không phải là đồ bỏ, cũng giúp mình cũng cố và review lại sau quãng thời gian làm việc với cụm tự trị k8s. Nếu bạn hay người thân bạn bè chuẩn bị thi thì hãy ĐỌC BÀI NÀY để hình dung được những viễn cảnh vãi ò có thể xảy ra.
 
 Chúc các bạn thành công trong kỳ thi này 💖💖💖
 
 _Update thông tin mới nhất: Mình được 86%/66% => PASS ✅ (Không biết sai ở đâu vì mình làm hết, thôi kệ 🙃)_
+
+---
+
+**_The first one, four more to go_**
