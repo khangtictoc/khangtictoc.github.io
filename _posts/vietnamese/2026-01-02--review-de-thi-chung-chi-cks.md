@@ -13,13 +13,13 @@ tags: [kubernetes]
 - Đây là đề thi hand-ons labs trên environment Kubernetes, chuyên môn chính về hầu như toàn bộ Security trên K8s
 - Khó hơn các CKA và các cert còn lại trong Kubestronaut family nói chung.
 - Học được nhiều, kiến thức hay bổ ích.
-- Nhìn chung vẫn không khó vì ôn tủ được dạng đề.
+- Nhìn chung vẫn không khó vì ôn tủ được dạng đề. Độ biến động ít so với đề Mock (KodeKloud)
 
 ## Nội Dung
 
 **NOTE 1:** Đề thi thực luôn có cho sẵn link document reference chính xác với câu hỏi, nhưng vì mục đích học tập nói chung thì nên đọc lướt full doc để khi search sẽ flexible hơn :Đ
 
-**NOTE 2**: Hơi lạ lúc thời điểm mình thi không ghi rõ whitelist trang [https://docs.docker.com/get-started/introduction/](https://docs.docker.com/get-started/introduction/), nhưng mà lúc làm thật thì có nhé
+**NOTE 2**: Hơi lạ 1 cái, lúc thời điểm mình thi thì CNCF không ghi rõ whitelist trang [https://docs.docker.com/get-started/introduction/](https://docs.docker.com/get-started/introduction/), nhưng mà lúc làm thật thì có nhé, very fair, hồi lúc luyện đề gặp mấy câu Docker mình thắc mắc vụ này hoài.
 
 - Tham khảo official tại [Certified Kubernetes Security Specialist (CKS)](https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/)
 - Ngoài ra mình sẽ detail các câu hỏi, chuyên đề vào thời điểm mình thi năm 2026. Ôn hết và tự tin được là auto Win:
@@ -59,7 +59,7 @@ tags: [kubernetes]
   - Cấu hình **Falco Rule**: Cho điểm, nhưng là chuyên đề lớn. Cần làm quen với doc Falco để thuần thục. Referent [Falco Rules](https://falco.org/docs/concepts/rules/).
   - Upgrade Kubernetes version cho master/worker nodes. CKA đã cover
 
-**Đề thi: 16 Questions**
+**Đề thi: 16 Questions (120 phút)**
 
 ## Thi thử trên Simulator Exam
 
@@ -70,7 +70,7 @@ Sau 1 tuần mình tự tin hơn sau khi đọc hết đáp án của Simulator 
 Đề thi Simulator là đề thi phi lý nhất quả đất, ai mới lạ chưa biết câu hỏi vô làm là đảm bảo cóng tay cho dù bạn có thông minh cỡ nào cũng không thể hốt hết 100%. Chưa kể mỗi câu hỏi ở đây sẽ ít nhất x2 workload so với câu hỏi thực, chưa kể câu hỏi khó là search banh nóc nhà bà doc luôn. Ví dụ:
 
 - Upgrade nodes trong Simulator: bắt làm 2 nodes, trong khi real luôn cho làm 1 node
-- Cấu hình 1 cái chuyên đề gì đó to lớn, như Falco, Audit hay đặc biệt Network Policy: bắt cấu hình từ đầu tới cuối, Network Policy thì cho 3,4 rules cực dài. Đề real thì thường cấu hình Falco, Audit, Admission mount sẵn , kube-apiserver thì gắn sẵn flags rồi mình chỉ thay 1 vài field thôi. Network Policy thì cùng lắm 1,2 cái cơ bản.
+- Cấu hình 1 cái chuyên đề gì đó to lớn, như Falco, Audit hay đặc biệt Network Policy: bắt cấu hình từ đầu tới cuối, Network Policy thì cho 3,4 rules cực dài. Đề real thì thường cấu hình Falco, Audit, Admission mount sẵn , kube-apiserver thì gắn sẵn flags rồi mình chỉ thay 1 vài field thôi. Network Policy thì cùng lắm 1,2 cái khá easy.
 
 # Real Exam
 
