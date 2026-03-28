@@ -6,7 +6,7 @@ categories: [Theory]
 tags: [storage, database]
 ---
 
-*(AI Generated Testing)*
+_(AI Generated Testing)_
 
 ## 🧾 Goal
 

@@ -14,4 +14,3 @@ For i = 1; i <=n; i++ {
   Bước 3: Bị gái táng sưng mồm
 }
 ```
-

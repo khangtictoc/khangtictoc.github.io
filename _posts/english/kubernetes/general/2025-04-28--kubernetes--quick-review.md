@@ -6,7 +6,7 @@ categories: [RKE2]
 tags: [intro, kubernetes]
 ---
 
-*(AI Generated Testing)*
+_(AI Generated Testing)_
 
 - [📘 Introduction](#-introduction)
   - [☸️ Kubernetes](#️-kubernetes)
@@ -26,10 +26,10 @@ A Kubernetes system has various units. Each unit play a independent role with sp
 
 ![Kubernetes Cluster](assets/img/2025/rke2-series/kubernetes-cluster-architecture.svg)
 
-In summary: 
+In summary:
 
 - **Master Node** is the headquarter which is responsible for management tasks like monitor **Worker nodes**'s health, decide and control rule for workloads to be placed on which **Worker**, store important data for cluster (etcd), ... They also expose API on port 6443 for developers like us to interactive with cluster
-- **Worker Node** - simple, receive commands from Master nodes to run workload like web, app, ... Like me working for my boss -_-
+- **Worker Node** - simple, receive commands from Master nodes to run workload like web, app, ... Like me working for my boss -\_-
 
 > Note: **Worker's resources** are scaled to the demand of how heavy the application will run. While **Master's resources** are scaled by number of Worker and depend on specific orchestration.
 
@@ -39,22 +39,26 @@ Every kubernetes system has following main components. Have a look!
 
 ![Kubernetes Cluster](assets/img/2025/rke2-series/components-of-kubernetes.svg)
 
-*Quote from official Kubernetes document. Let's review all!*
+_Quote from official Kubernetes document. Let's review all!_
 
 🧠 **Control plane components**
 
 🔌 **kube-apiserver**
+
 - Exposes the Kubernetes API.
 
 💾 **etcd**
+
 - Consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
 - Make sure you have a back up plan for the data.
 
 🗓️ **kube-scheduler**
+
 - Watches for newly created Pods with no assigned node, and selects a node for them to run on.
 - Factors taken into account for scheduling decisions include: individual and collective resource requirements, hardware/software/policy constraints, affinity and anti-affinity specifications, data locality, inter-workload interference, and deadlines.
 
 🎮 **kube-controller-manager**
+
 - Runs controller processes. Logically, each controller is a separate process.
 - There are many different types of controllers. Some examples of them are:
   - Node controller: Responsible for noticing and responding when nodes go down.
@@ -64,29 +68,33 @@ Every kubernetes system has following main components. Have a look!
   - ...
 
 ☁️ **cloud-controller-manager**
+
 - Lets you link your cluster into your cloud provider's API
 - Only runs controllers that are specific to your cloud provider. If running Kubernetes on your own premises, the cluster does not have a cloud controller manager.
 
 🕵️ **kubelet**
+
 - An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod.
 - The kubelet doesn't manage containers which were not created by Kubernetes.
 
 🧱 **kube-proxy (optional)**
+
 - A network proxy that runs on each node in your cluster, implementing part of the Kubernetes "Service" concept.
-- Maintains network rules on nodes. 
+- Maintains network rules on nodes.
 - Uses the operating system packet filtering layer (`iptables`) if there is one and it's available. Otherwise, kube-proxy forwards the traffic itself.
 
 > Note: If you use a network plugin that implements packet forwarding for Services by itself, and providing equivalent behavior to kube-proxy, then you do not need to run kube-proxy on the nodes in your cluster.
 
 📦 **Container runtime**
-- A fundamental component that empowers Kubernetes to run containers effectively. 
+
+- A fundamental component that empowers Kubernetes to run containers effectively.
 - It is responsible for managing the execution and lifecycle of containers within the Kubernetes environment. For example: containerd, CRI-O, and any other implementation of the Kubernetes CRI (Container Runtime Interface).
 
-There are **Addons** (DNS, Network plugins, Dashboard UI, ...). We would dissect these in the incoming topics. 
+There are **Addons** (DNS, Network plugins, Dashboard UI, ...). We would dissect these in the incoming topics.
 
 ### 🎛️ Container orchestration
 
-A Kubernetes cluster are very complicated in general. Once upon a time, there is no definition about "orchestration". All components are manually created, all keys or token are manually generated, ... Joining nodes to cluster? - Manual too! 
+A Kubernetes cluster are very complicated in general. Once upon a time, there is no definition about "orchestration". All components are manually created, all keys or token are manually generated, ... Joining nodes to cluster? - Manual too!
 
 Refer to [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way) if you want to torture yourself. That's why orchestration are introduced to automate these process. Each orchestration will have its advantages, upgrade components for more advanced features or change underlying technology to gain lightweight, ... The table below lists some common orchestration and its prominent features:
 

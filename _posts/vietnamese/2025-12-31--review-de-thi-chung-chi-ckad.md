@@ -12,7 +12,7 @@ tags: [kubernetes]
 
 - Nội dung: Y chang CKA (99%)
 - Độ khó: Dễ hơn CKA nhiều
-- Rút kinh nghiệm: Thi CKA xong đăng ký CKAD liền và luôn, ôn chi tốn thời gian. 
+- Rút kinh nghiệm: Thi CKA xong đăng ký CKAD liền và luôn, ôn chi tốn thời gian.
 - Exam marketing là chính, nội dung duplicate là rõ. Content chán không chịu được, chỉ tổ tốn tiền.
 
 **Kết quả**: `78%/66%` (làm ơn làm kỹ nếu dư thời gian, đừng như mình 🙃)
