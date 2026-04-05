@@ -1,12 +1,12 @@
 ---
-title: Đề thi CKAD (Q4 - 2025) - Quá thất vọng (Part 2)
+title: Đề thi CKAD (Q4 - 2025) - Vừa ngủ vừa thi, CKA ver2.0 (Part 2)
 author: khangtictoc
 date: 2025-12-31 00:34:00 +0800
 categories: [Tiếng Việt, Certification, CNCF, CKAD]
 tags: [kubernetes]
 ---
 
-**Trước khi thi**: Mở 2/8 bài "Mock Exam" của KodeKloud -> Click vào nút "End Exam" -> Xem đáp án thấy có câu nào hay thì xem và ghi nhớ -> Đăng ký đi thi
+**Trước khi thi**: Mở 2/8 bài "Mock Exam" của KodeKloud -> "End Exam" -> Xem đáp án thấy có câu nào hay thì xem và ghi nhớ -> Đăng ký đi thi
 
 **Đánh giá**:
 

@@ -1,5 +1,5 @@
 ---
-title: Đề thi CKS (Q1 - 2025) - Bài thi cảm xúc (Part 4)
+title: Đề thi CKS (Q1 - 2026) - Bài thi cảm xúc (Part 4)
 author: khangtictoc
 date: 2026-03-23 00:34:00 +0800
 categories: [Tiếng Việt, Certification, CNCF, Kubestronaut]
